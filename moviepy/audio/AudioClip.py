@@ -1,8 +1,8 @@
 """
-Implements AudioClip (base class for audio clips) and its main subclasses:
+Implements AudioClip (base class for audio clips) and its main subclasses.
 
-- Audio clips: AudioClip, AudioFileClip, AudioArrayClip
-- Composition: CompositeAudioClip
+Note: the :py:class:`~moviepy.audio.io.AudioFileClip` represents an audio clip made from a sound file. It is not listed
+in the table below because it is located in the :py:class:`moviepy.audio.io` package.
 """
 
 import numbers
@@ -20,11 +20,12 @@ from moviepy.tools import extensions_dict
 
 class AudioClip(Clip):
     """
-    Base class for audio clips.
+    An AudioClip represents a segment of audio data.
 
     This class inherits from :py:class:`~moviepy.Clip.Clip`.
 
-    See ``AudioFileClip`` and ``CompositeAudioClip`` for usable classes.
+    This class is a base class that is not intended to be instantiated See ``AudioFileClip`` and ``CompositeAudioClip``
+    for usable classes.
 
     An AudioClip is a Clip with a ``frame_function``  attribute of
     the form `` t -> [ f_t ]`` for mono sound and
