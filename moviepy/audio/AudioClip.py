@@ -253,6 +253,11 @@ class AudioClip(Clip):
         logger
           Either ``"bar"`` for progress bar or ``None`` or any Proglog logger.
 
+        Raises
+        ------
+        ValueError
+            if no codec is specified in the parameters and there does not exist a codec associated with the file name
+
         """
         if not fps:
             if hasattr(self, "fps"):
