@@ -167,7 +167,23 @@ class AudioClip(Clip):
         return snd_array
 
     def max_volume(self, stereo=False, chunksize=50000, logger=None):
-        """Returns the maximum volume level of the clip."""
+        """
+        Returns the maximum volume level of the clip.
+
+        Parameters
+        ----------
+        stereo
+            if True, returns a float array of maximums separated by channel. If false, returns a single float.
+
+        chunksize
+            Number of audio samples to process at one time while iterating over the audio data. A smaller chunksize
+            Areduces memory usage but increases processing overhead
+
+        logger
+            Either “bar” for progress bar or None or any Proglog logger
+
+
+        """
         # max volume separated by channels if ``stereo`` and not mono
         stereo = stereo and self.nchannels > 1
 
