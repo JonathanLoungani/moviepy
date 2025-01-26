@@ -1,4 +1,5 @@
-"""Implements AudioClip (base class for audio clips) and its main subclasses:
+"""
+Implements AudioClip (base class for audio clips) and its main subclasses:
 
 - Audio clips: AudioClip, AudioFileClip, AudioArrayClip
 - Composition: CompositeAudioClip
@@ -18,7 +19,10 @@ from moviepy.tools import extensions_dict
 
 
 class AudioClip(Clip):
-    """Base class for audio clips.
+    """
+    Base class for audio clips.
+
+    This class inherits from :py:class:`~moviepy.Clip.Clip`.
 
     See ``AudioFileClip`` and ``CompositeAudioClip`` for usable classes.
 
