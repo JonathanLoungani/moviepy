@@ -41,8 +41,9 @@ class AudioClip(Clip):
       Duration of the clip (in seconds). Some clips are infinite, in
       this case their duration will be ``None``.
 
-    nchannels
-      Number of channels (one or two for mono or stereo).
+    fps
+        Sample rate of the audio clip in frames per second
+
 
     Examples
     --------
