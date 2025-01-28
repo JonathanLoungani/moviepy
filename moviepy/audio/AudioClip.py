@@ -24,8 +24,9 @@ class AudioClip(Clip):
 
     This class inherits from :py:class:`~moviepy.Clip.Clip`.
 
-    This class is a base class that is not intended to be instantiated See ``AudioFileClip`` and ``CompositeAudioClip``
-    for usable classes.
+    This class is a base class that is not intended to be instantiated.
+    See :py:class:`~moviepy.audio.io.AudioFileClip.AudioFileClip`, :py:class:`~moviepy.audio.AudioClip.AudioArrayClip`, and
+    :py:class:`~moviepy.audio.AudioClip.CompositeAudioClip` for usable classes.
 
     An AudioClip is a Clip with a ``frame_function``  attribute of
     the form `` t -> [ f_t ]`` for mono sound and
